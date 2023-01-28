@@ -8,10 +8,18 @@ body {
   min-height: 100vh;
 }
 
-p {
+p, li {
   font-size: 14px;
 }
 
 .title-not-found {
   color: darkgray;
+}
+
+.list-data {
+  text-align: left;
+}
+
+.list-data li {
+  margin-bottom: 10px;
 }
