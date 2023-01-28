@@ -3,7 +3,7 @@ import Layout from '@/components/Layout'
 
 export default function user() {
   return (
-    <Layout>
+    <Layout pageTitle='Users Page'>
         <h1>users page</h1>
     </Layout>
   )
