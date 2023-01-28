@@ -9,3 +9,7 @@ body {
 p {
   font-size: 14px;
 }
+
+.title-not-found {
+  color: darkgray;
+}
