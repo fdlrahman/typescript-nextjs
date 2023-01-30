@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout'
 
 interface User {
-  id: Number,
+  id?: Number,
   name: String,
   email: String,
   phone: String,
@@ -18,7 +18,7 @@ export default function detail(props: UserDetailProps) {
 
   return (
     <Layout pageTitle="User Detail">
-      <h1>{user.id.toString()}. {user.name}</h1>
+      <h1>{user.id?.toString()}. {user.name}</h1>
       <h3 className='additional-information'>Email: {user.email}</h3>
       <h3 className='additional-information'>Phone: {user.phone}</h3>
       <h3 className='additional-information'>Address: {`${user.address.street}, ${user.address.city}`}</h3>
@@ -32,12 +32,12 @@ export async function getStaticPaths() {
   const dataUsers = await res.json()
 
   const paths = dataUsers.map((user: User) => ({
-    params: { id: user.id.toString() }
+    params: { id: user.id?.toString() }
   }))
 
   return {
     paths,
-    fallback: true
+    fallback: false
   }
 }
 
