@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout'
+import { useRouter } from 'next/router'
 
 interface UsersProps {
   dataUsers: Array<any>
@@ -6,6 +7,9 @@ interface UsersProps {
 
 export default function user(props: UsersProps) {
   const { dataUsers } = props
+  const router = useRouter()
+
+  const nav = (url: number) => router.push(`users/${url}`)
 
   return (
     <Layout pageTitle='Users Page'>
@@ -13,7 +17,7 @@ export default function user(props: UsersProps) {
 
         <ol className='list-data'>
           {
-            dataUsers.map(({ name, phone }, idx) => <li key={idx}>{name} <br /> {phone}</li>)
+            dataUsers.map(({ id, name, phone }, idx) => <li onClick={() => nav(id)} key={idx}>{name} <br /> {phone}</li>)
           }
         </ol>
     </Layout>

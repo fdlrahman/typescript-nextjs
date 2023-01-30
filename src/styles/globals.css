@@ -21,5 +21,17 @@ p, li {
 }
 
 .list-data li {
+  width: max-content;
   margin-bottom: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.list-data li:hover {
+  color: #333;
+}
+
+.additional-information {
+  font-size: 18px;
+  margin: 10px
 }
