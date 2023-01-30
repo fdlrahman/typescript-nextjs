@@ -35,3 +35,17 @@ p, li {
   font-size: 18px;
   margin: 10px
 }
+
+.blogs-container {
+  display: flex;
+  /* gap: 10px; */
+  flex-wrap: wrap;
+}
+
+.continue-blogs {
+  margin: 15px auto;
+  background-color: #e6e1e1;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
